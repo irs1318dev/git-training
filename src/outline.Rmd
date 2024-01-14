@@ -1,0 +1,191 @@
+---
+title: "Outline"
+author: "Stacy Irwin"
+date: "2024-01-06"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# TODO
+* more git log info? -n, --oneline, branch name, etc.
+* Do we really need to run git log --all?
+* Getting help on git commands
+* The Git Book
+* ls -depth 2 -name -file (Windows)
+* ls -R (Mac, Linux)
+* Clarify during checkout in part 1 that normally must stash or commit changes before checking out a different branch. Able to check out branch in this case because the current and to-be-checked-out branch refer to the
+same commit. Normally checkout will change the content of the working
+directory.
+* Change order of instructions when making friendmath repo in part 2.
+* Concept: Git repo contains commits and each commit is a snapshot of your project.
+* Fix part 2 captions
+* Difference between fetch and pull
+
+# Part 1
+
+1. Prerequisites
+* Can use terminal
+* Know just a little Python
+* VS Code
+
+2. Configuring Git
+* Email and user name
+* Default editor
+* Default branch name (main)
+
+3. Describe version control
+
+4. Create a Git repo
+* git init
+* git status
+
+5. the .git folder
+
+6. Add and commit an empty __init__.py file.
+* run git status on a clean working directory
+
+7. Git concepts
+* Working directory
+* Staging area
+* .git directory
+
+8. File States
+* Untracked
+* Staged
+* Committed and Unmodified
+* Modified
+
+9. Revert to a prior commit
+* Create basic.py file
+* Commit again
+* Run git log --all
+* Check our prior commit
+* Run git log --all again
+* Checkout the second commit
+
+10. Git Hash values
+* SHA-1
+* 40 characters
+* 1.46 * 10^48 possible values
+
+11. The .git Folder
+* Files and folders overview
+* Objects folder
+* Tree file 787f
+* Blob files
+* Commit files
+* cat-file -p <hash> (Show content)
+* cat-file -t <hash> (Show type)
+
+12. Exercises
+* Why are there only two blobs?
+* Repo graph
+* Duplicate files exercise
+
+# Part 2 Branches
+1. Duplicate repo
+* Copy frcmath to friendmath
+* Add a subtract() function
+* Create trig.py file.
+* Difficult to manually combine code
+
+2. Main branch is default
+
+3. HEAD
+* cat .git/HEAD
+* Follow path in HEAD folder refs/heads/main
+* SHA-1 hash that points to checked out commit file
+
+3. Create a branch subtract
+* git branch command
+* git checkout subtract
+* LOOK AT THIS SECTION: checking out branch with modified file?
+* commit on new branch
+
+4. Branch diagrams
+* After creating new branch
+* Show on diagram how head and pointer move when commiting.
+
+5. Merging
+* Add friendmath/trig.py and commit.
+* Create a remote that links to friendmath
+* git remote
+* git remote get-url <remote-name>
+* Remotes defined in .git/config
+* git fetch
+
+## NOT YET DONE
+* Finish merge example
+* Show how to work through merge conflict
+* Best practices to avoid merge conflicts
+  * Now where your branch came from!
+  * Short lived branches that change only a few files
+  * Try not to change the same file in multiple branches. This gets into
+    application architecture. Single responsibility principle helps here.
+* Commit messages -- best practices
+    
+# Part 3 Remotes and Github
+1. Github accounts and access tokens
+2. Clone a repo from Github
+3. Create origin that points to Github repo
+4. Tracking branches
+5. Push and Pull
+6. Pull requests
+7. Branch strategies
+
+# Part 4 How To Get out of trouble
+1. Rebase vs Merge
+* Rebase changes history -- fine for local branches
+* Good to do when main changes -- rebase your branch on most recent code
+2. Merge or rebase your branch on main then test, BEFORE merging with main.
+3. Checking out or resetting individual files
+4. Interactive rebase (squash commits)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
